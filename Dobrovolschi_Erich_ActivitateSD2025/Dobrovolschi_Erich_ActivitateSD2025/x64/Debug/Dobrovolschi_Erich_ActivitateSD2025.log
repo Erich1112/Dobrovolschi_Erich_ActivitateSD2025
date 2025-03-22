@@ -1,0 +1,4 @@
+﻿  Seminar01.c
+C:\Users\40CM\Desktop\Facultate\C Structuri de date\Dobrovolschi_Erich_ActivitateSD2025\Dobrovolschi_Erich_ActivitateSD2025\Seminar01.c(16,26): warning C4013: 'strlen' undefined; assuming extern returning int
+C:\Users\40CM\Desktop\Facultate\C Structuri de date\Dobrovolschi_Erich_ActivitateSD2025\Dobrovolschi_Erich_ActivitateSD2025\Seminar01.c(17,2): warning C4013: 'strcpy' undefined; assuming extern returning int
+  Dobrovolschi_Erich_ActivitateSD2025.vcxproj -> C:\Users\40CM\Desktop\Facultate\C Structuri de date\Dobrovolschi_Erich_ActivitateSD2025\x64\Debug\Dobrovolschi_Erich_ActivitateSD2025.exe
