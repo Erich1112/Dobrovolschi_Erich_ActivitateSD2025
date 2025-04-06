@@ -86,10 +86,21 @@ void copiazaMasiniIeftine(struct Masina* vector, char nrElemente, float prag, st
 struct Masina getPrimulElementConditionat(struct Masina* vector, int nrElemente, const char* conditie) {
 	//trebuie cautat elementul care indeplineste o conditie
 	//dupa atributul de tip char*. Acesta este returnat.
-	struct Masina s;
-	s.id = 1;
-
-	return s;
+	 
+	struct Masina rez;
+	rez.id = -1;
+	rez.model = NULL;
+	rez.nrKm = 0;
+	rez.pret = 0;
+	rez.tipMotor = ' ';
+	for (int i = 0; i < nrElemente; i++)
+	{
+		if (strcmp(vector[i].model, conditie) == 0)
+		{
+			rez = initializare(vector[i].id, vector[i].nrKm, vector[i].model, vector[i].pret, vector[i].tipMotor);
+		}
+	}
+	return rez;
 }
 	
 
@@ -112,8 +123,18 @@ int main() {
 	copiazaMasiniIeftine(vec, n, 1500, &vecNou, &nrElemCopiat);
 	afisareVector(vecNou, nrElemCopiat);
 
+	struct Masina rezultat = getPrimulElementConditionat(vec, n, "Logan");
+	if (rezultat.model != NULL);
+	{
+		printf("\n");
+		afisare(rezultat);
+	}
+	free(rezultat.model);
+
 	dezalocare(&vecNou, &nrElemCopiat);
 	dezalocare(&vec, &n);
+
+	
 
 	return 0;
 }
